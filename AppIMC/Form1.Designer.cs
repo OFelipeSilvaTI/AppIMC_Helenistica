@@ -37,13 +37,8 @@
             lblClassif = new Label();
             numAltura = new NumericUpDown();
             numPeso = new NumericUpDown();
-            dataGridView1 = new DataGridView();
-            Id = new DataGridViewTextBoxColumn();
-            Nome = new DataGridViewTextBoxColumn();
-            Telefone = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)numAltura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numPeso).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // lblAltura
@@ -93,10 +88,10 @@
             // 
             // btCalcular
             // 
-            btCalcular.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btCalcular.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btCalcular.Enabled = false;
             btCalcular.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold);
-            btCalcular.Location = new Point(538, 94);
+            btCalcular.Location = new Point(302, 220);
             btCalcular.Name = "btCalcular";
             btCalcular.Size = new Size(166, 50);
             btCalcular.TabIndex = 7;
@@ -107,7 +102,9 @@
             // lblIMC
             // 
             lblIMC.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblIMC.BackColor = Color.Transparent;
             lblIMC.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIMC.ForeColor = SystemColors.ButtonFace;
             lblIMC.Location = new Point(0, 334);
             lblIMC.Name = "lblIMC";
             lblIMC.Size = new Size(801, 32);
@@ -117,7 +114,9 @@
             // lblClassif
             // 
             lblClassif.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblClassif.BackColor = Color.Transparent;
             lblClassif.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblClassif.ForeColor = SystemColors.ButtonFace;
             lblClassif.Location = new Point(0, 384);
             lblClassif.Name = "lblClassif";
             lblClassif.Size = new Size(801, 32);
@@ -149,37 +148,12 @@
             numPeso.Size = new Size(120, 39);
             numPeso.TabIndex = 12;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, Nome, Telefone });
-            dataGridView1.Location = new Point(12, 168);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(776, 146);
-            dataGridView1.TabIndex = 13;
-            // 
-            // Id
-            // 
-            Id.HeaderText = "ID";
-            Id.Name = "Id";
-            // 
-            // Nome
-            // 
-            Nome.HeaderText = "Nome";
-            Nome.Name = "Nome";
-            // 
-            // Telefone
-            // 
-            Telefone.HeaderText = "Telefone";
-            Telefone.Name = "Telefone";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.unnamed;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
             Controls.Add(numPeso);
             Controls.Add(numAltura);
             Controls.Add(lblClassif);
@@ -195,7 +169,6 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)numAltura).EndInit();
             ((System.ComponentModel.ISupportInitialize)numPeso).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -211,9 +184,5 @@
         private Label lblClassif;
         private NumericUpDown numAltura;
         private NumericUpDown numPeso;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn Nome;
-        private DataGridViewTextBoxColumn Telefone;
     }
 }
