@@ -33,13 +33,17 @@
             lblMassa = new Label();
             lblKg = new Label();
             btCalcular = new Button();
-            label1 = new Label();
             lblIMC = new Label();
             lblClassif = new Label();
             numAltura = new NumericUpDown();
             numPeso = new NumericUpDown();
+            dataGridView1 = new DataGridView();
+            Id = new DataGridViewTextBoxColumn();
+            Nome = new DataGridViewTextBoxColumn();
+            Telefone = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)numAltura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numPeso).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // lblAltura
@@ -66,6 +70,7 @@
             // 
             // lblMassa
             // 
+            lblMassa.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblMassa.AutoSize = true;
             lblMassa.Font = new Font("Swis721 Cn BT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMassa.Location = new Point(478, 94);
@@ -77,6 +82,7 @@
             // 
             // lblKg
             // 
+            lblKg.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblKg.AutoSize = true;
             lblKg.Font = new Font("Swis721 Cn BT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblKg.Location = new Point(474, 138);
@@ -87,50 +93,42 @@
             // 
             // btCalcular
             // 
+            btCalcular.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btCalcular.Enabled = false;
             btCalcular.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold);
-            btCalcular.Location = new Point(289, 183);
+            btCalcular.Location = new Point(538, 94);
             btCalcular.Name = "btCalcular";
-            btCalcular.Size = new Size(166, 39);
+            btCalcular.Size = new Size(166, 50);
             btCalcular.TabIndex = 7;
             btCalcular.Text = "Calcular";
             btCalcular.UseVisualStyleBackColor = true;
             btCalcular.Click += btCalcular_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(319, 245);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 32);
-            label1.TabIndex = 8;
-            label1.Text = "IMC:";
-            // 
             // lblIMC
             // 
-            lblIMC.AutoSize = true;
+            lblIMC.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblIMC.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIMC.Location = new Point(388, 245);
+            lblIMC.Location = new Point(0, 334);
             lblIMC.Name = "lblIMC";
-            lblIMC.Size = new Size(29, 32);
+            lblIMC.Size = new Size(801, 32);
             lblIMC.TabIndex = 9;
-            lblIMC.Text = "X";
-            lblIMC.Click += lblIMC_Click;
+            lblIMC.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblClassif
             // 
-            lblClassif.AutoSize = true;
+            lblClassif.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblClassif.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblClassif.Location = new Point(272, 349);
+            lblClassif.Location = new Point(0, 384);
             lblClassif.Name = "lblClassif";
-            lblClassif.Size = new Size(191, 32);
+            lblClassif.Size = new Size(801, 32);
             lblClassif.TabIndex = 10;
             lblClassif.Text = "BURACO NEGRO";
+            lblClassif.TextAlign = ContentAlignment.MiddleCenter;
             lblClassif.Click += label2_Click;
             // 
             // numAltura
             // 
+            numAltura.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             numAltura.DecimalPlaces = 2;
             numAltura.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold);
             numAltura.Location = new Point(348, 79);
@@ -142,6 +140,7 @@
             // 
             // numPeso
             // 
+            numPeso.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             numPeso.DecimalPlaces = 2;
             numPeso.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold);
             numPeso.Location = new Point(348, 123);
@@ -150,30 +149,53 @@
             numPeso.Size = new Size(120, 39);
             numPeso.TabIndex = 12;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Id, Nome, Telefone });
+            dataGridView1.Location = new Point(12, 168);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(776, 146);
+            dataGridView1.TabIndex = 13;
+            // 
+            // Id
+            // 
+            Id.HeaderText = "ID";
+            Id.Name = "Id";
+            // 
+            // Nome
+            // 
+            Nome.HeaderText = "Nome";
+            Nome.Name = "Nome";
+            // 
+            // Telefone
+            // 
+            Telefone.HeaderText = "Telefone";
+            Telefone.Name = "Telefone";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.unnamed;
             ClientSize = new Size(800, 450);
-            ControlBox = false;
+            Controls.Add(dataGridView1);
             Controls.Add(numPeso);
             Controls.Add(numAltura);
             Controls.Add(lblClassif);
             Controls.Add(lblIMC);
-            Controls.Add(label1);
             Controls.Add(btCalcular);
             Controls.Add(lblKg);
             Controls.Add(lblMassa);
             Controls.Add(lblPeso);
             Controls.Add(lblAltura);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora de IMC Helenistica";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)numAltura).EndInit();
             ((System.ComponentModel.ISupportInitialize)numPeso).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -185,10 +207,13 @@
         private Label lblMassa;
         private Label lblKg;
         private Button btCalcular;
-        private Label label1;
         private Label lblIMC;
         private Label lblClassif;
         private NumericUpDown numAltura;
         private NumericUpDown numPeso;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Nome;
+        private DataGridViewTextBoxColumn Telefone;
     }
 }
