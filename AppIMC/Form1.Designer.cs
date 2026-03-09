@@ -33,7 +33,6 @@
             lblMassa = new Label();
             lblKg = new Label();
             btCalcular = new Button();
-            label1 = new Label();
             lblIMC = new Label();
             lblClassif = new Label();
             numAltura = new NumericUpDown();
@@ -44,6 +43,7 @@
             // 
             // lblAltura
             // 
+            lblAltura.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblAltura.AutoSize = true;
             lblAltura.BackColor = SystemColors.Control;
             lblAltura.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -56,6 +56,7 @@
             // 
             // lblPeso
             // 
+            lblPeso.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblPeso.AutoSize = true;
             lblPeso.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPeso.Location = new Point(268, 123);
@@ -66,6 +67,7 @@
             // 
             // lblMassa
             // 
+            lblMassa.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblMassa.AutoSize = true;
             lblMassa.Font = new Font("Swis721 Cn BT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMassa.Location = new Point(478, 94);
@@ -77,6 +79,7 @@
             // 
             // lblKg
             // 
+            lblKg.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblKg.AutoSize = true;
             lblKg.Font = new Font("Swis721 Cn BT", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblKg.Location = new Point(474, 138);
@@ -87,50 +90,46 @@
             // 
             // btCalcular
             // 
+            btCalcular.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btCalcular.Enabled = false;
             btCalcular.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold);
-            btCalcular.Location = new Point(289, 183);
+            btCalcular.Location = new Point(1, 183);
             btCalcular.Name = "btCalcular";
-            btCalcular.Size = new Size(166, 39);
+            btCalcular.Size = new Size(799, 39);
             btCalcular.TabIndex = 7;
             btCalcular.Text = "Calcular";
             btCalcular.UseVisualStyleBackColor = true;
             btCalcular.Click += btCalcular_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(319, 245);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 32);
-            label1.TabIndex = 8;
-            label1.Text = "IMC:";
-            // 
             // lblIMC
             // 
-            lblIMC.AutoSize = true;
+            lblIMC.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblIMC.BackColor = SystemColors.Control;
             lblIMC.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIMC.Location = new Point(388, 245);
+            lblIMC.Location = new Point(1, 276);
             lblIMC.Name = "lblIMC";
-            lblIMC.Size = new Size(29, 32);
+            lblIMC.Size = new Size(799, 32);
             lblIMC.TabIndex = 9;
             lblIMC.Text = "X";
+            lblIMC.TextAlign = ContentAlignment.MiddleCenter;
             lblIMC.Click += lblIMC_Click;
             // 
             // lblClassif
             // 
-            lblClassif.AutoSize = true;
+            lblClassif.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblClassif.BackColor = SystemColors.Control;
             lblClassif.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblClassif.Location = new Point(272, 349);
+            lblClassif.Location = new Point(1, 349);
             lblClassif.Name = "lblClassif";
-            lblClassif.Size = new Size(191, 32);
+            lblClassif.Size = new Size(799, 32);
             lblClassif.TabIndex = 10;
             lblClassif.Text = "BURACO NEGRO";
+            lblClassif.TextAlign = ContentAlignment.MiddleCenter;
             lblClassif.Click += label2_Click;
             // 
             // numAltura
             // 
+            numAltura.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             numAltura.DecimalPlaces = 2;
             numAltura.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold);
             numAltura.Location = new Point(348, 79);
@@ -142,6 +141,7 @@
             // 
             // numPeso
             // 
+            numPeso.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             numPeso.DecimalPlaces = 2;
             numPeso.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold);
             numPeso.Location = new Point(348, 123);
@@ -156,12 +156,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.unnamed;
             ClientSize = new Size(800, 450);
-            ControlBox = false;
             Controls.Add(numPeso);
             Controls.Add(numAltura);
             Controls.Add(lblClassif);
             Controls.Add(lblIMC);
-            Controls.Add(label1);
             Controls.Add(btCalcular);
             Controls.Add(lblKg);
             Controls.Add(lblMassa);
@@ -185,7 +183,6 @@
         private Label lblMassa;
         private Label lblKg;
         private Button btCalcular;
-        private Label label1;
         private Label lblIMC;
         private Label lblClassif;
         private NumericUpDown numAltura;
