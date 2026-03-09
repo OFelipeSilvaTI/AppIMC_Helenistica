@@ -43,6 +43,7 @@
             // 
             // lblAltura
             // 
+            lblAltura.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblAltura.AutoSize = true;
             lblAltura.BackColor = SystemColors.Control;
             lblAltura.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -55,6 +56,7 @@
             // 
             // lblPeso
             // 
+            lblPeso.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblPeso.AutoSize = true;
             lblPeso.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPeso.Location = new Point(268, 123);
