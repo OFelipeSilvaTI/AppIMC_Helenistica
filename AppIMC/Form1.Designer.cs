@@ -93,9 +93,9 @@
             btCalcular.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btCalcular.Enabled = false;
             btCalcular.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold);
-            btCalcular.Location = new Point(1, 183);
+            btCalcular.Location = new Point(302, 220);
             btCalcular.Name = "btCalcular";
-            btCalcular.Size = new Size(799, 39);
+            btCalcular.Size = new Size(166, 50);
             btCalcular.TabIndex = 7;
             btCalcular.Text = "Calcular";
             btCalcular.UseVisualStyleBackColor = true;
@@ -104,24 +104,24 @@
             // lblIMC
             // 
             lblIMC.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            lblIMC.BackColor = SystemColors.Control;
+            lblIMC.BackColor = Color.Transparent;
             lblIMC.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIMC.Location = new Point(1, 276);
+            lblIMC.ForeColor = SystemColors.ButtonFace;
+            lblIMC.Location = new Point(0, 334);
             lblIMC.Name = "lblIMC";
-            lblIMC.Size = new Size(799, 32);
+            lblIMC.Size = new Size(801, 32);
             lblIMC.TabIndex = 9;
-            lblIMC.Text = "X";
             lblIMC.TextAlign = ContentAlignment.MiddleCenter;
-            lblIMC.Click += lblIMC_Click;
             // 
             // lblClassif
             // 
             lblClassif.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            lblClassif.BackColor = SystemColors.Control;
+            lblClassif.BackColor = Color.Transparent;
             lblClassif.Font = new Font("Swis721 Cn BT", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblClassif.Location = new Point(1, 349);
+            lblClassif.ForeColor = SystemColors.ButtonFace;
+            lblClassif.Location = new Point(0, 384);
             lblClassif.Name = "lblClassif";
-            lblClassif.Size = new Size(799, 32);
+            lblClassif.Size = new Size(801, 32);
             lblClassif.TabIndex = 10;
             lblClassif.Text = "BURACO NEGRO";
             lblClassif.TextAlign = ContentAlignment.MiddleCenter;
@@ -165,7 +165,6 @@
             Controls.Add(lblMassa);
             Controls.Add(lblPeso);
             Controls.Add(lblAltura);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora de IMC Helenistica";

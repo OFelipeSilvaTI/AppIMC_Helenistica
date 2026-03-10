@@ -24,7 +24,7 @@ namespace AppIMC
             peso = (double)numPeso.Value;
             imc = peso / Math.Pow(alt, 2);
 
-            lblIMC.Text = $"{imc:F2} kg/m²";
+            lblIMC.Text = $"IMC: {imc:F2} kg/m²";
 
             lblClassif.Text = Classificar(imc);
         }
@@ -43,13 +43,6 @@ namespace AppIMC
                 return "Obesidade II";
 
             return "Obesidade Mórbida";
-        }
-
-
-
-        private void lblIMC_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void lblAltura_Click(object sender, EventArgs e)
