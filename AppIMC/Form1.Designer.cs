@@ -169,6 +169,8 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora de IMC Helenistica";
+            FormClosing += Form1_FormClosing;
+            FormClosed += Form1_FormClosed;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)numAltura).EndInit();
             ((System.ComponentModel.ISupportInitialize)numPeso).EndInit();

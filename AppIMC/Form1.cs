@@ -41,7 +41,7 @@ namespace AppIMC
                 return "Obesidade I";
             if (imc < 40)
                 return "Obesidade II";
-            
+
             return "Obesidade Mórbida";
         }
 
@@ -59,7 +59,7 @@ namespace AppIMC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Bem-Vindo à Calculadora Helenistica");
         }
 
         private void numAltura_ValueChanged_1(object sender, EventArgs e)
@@ -70,6 +70,21 @@ namespace AppIMC
             else //false
                 btCalcular.Enabled = false; */
             btCalcular.Enabled = (a != 0);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Deseja realmente sair?", "Calculadora de IMC", MessageBoxButtons.YesNo);
+
+            if (r == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MessageBox.Show(e.CloseReason.ToString());
         }
     }
 }
